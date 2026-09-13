@@ -1,0 +1,127 @@
+entities:
+
+  customers:
+    description: "Customers who purchase products from the business."
+
+    primary_key: customer_id
+
+    fields:
+
+      customer_id:
+        type: integer
+        description: "Unique identifier for a customer."
+
+      customer_name:
+        type: string
+        description: "Name of the customer."
+
+      region:
+        type: string
+        description: "Geographic region of the customer."
+
+        values:
+          - North
+          - South
+          - East
+          - West
+
+      segment:
+        type: string
+        description: "Business segment of the customer."
+
+        values:
+          - Consumer
+          - SMB
+          - Enterprise
+
+
+  products:
+    description: "Products sold by the business."
+
+    primary_key: product_id
+
+    fields:
+
+      product_id:
+        type: integer
+        description: "Unique identifier for a product."
+
+      product_name:
+        type: string
+        description: "Name of the product."
+
+      category:
+        type: string
+        description: "Product category."
+
+        values:
+          - Electronics
+          - Furniture
+          - Accessories
+
+      price:
+        type: number
+        description: "Standard product price."
+
+
+  orders:
+    description: "Customer orders."
+
+    primary_key: order_id
+
+    fields:
+
+      order_id:
+        type: integer
+        description: "Unique identifier for an order."
+
+      customer_id:
+        type: integer
+        description: "Customer who placed the order."
+
+      order_date:
+        type: date
+        description: "Date the order was placed."
+
+
+  order_items:
+    description: "Individual products contained in orders."
+
+    primary_key: order_item_id
+
+    fields:
+
+      order_item_id:
+        type: integer
+        description: "Unique identifier for an order item."
+
+      order_id:
+        type: integer
+        description: "Order containing the item."
+
+      product_id:
+        type: integer
+        description: "Product included in the order."
+
+      quantity:
+        type: integer
+        description: "Number of units purchased."
+
+      unit_price:
+        type: number
+        description: "Price paid per unit."
+
+
+relationships:
+
+  - from: orders.customer_id
+    to: customers.customer_id
+    type: many_to_one
+
+  - from: order_items.order_id
+    to: orders.order_id
+    type: many_to_one
+
+  - from: order_items.product_id
+    to: products.product_id
+    type: many_to_one

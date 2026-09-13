@@ -1,0 +1,40 @@
+{"question":"What was revenue?","bql":{"metric":"revenue","group_by":[]}}
+{"question":"What were total sales?","bql":{"metric":"revenue","group_by":[]}}
+{"question":"How much money did we generate?","bql":{"metric":"revenue","group_by":[]}}
+{"question":"Show me total revenue.","bql":{"metric":"revenue","group_by":[]}}
+
+{"question":"How many orders did we have?","bql":{"metric":"orders","group_by":[]}}
+{"question":"What was the order count?","bql":{"metric":"orders","group_by":[]}}
+{"question":"How many purchases were made?","bql":{"metric":"orders","group_by":[]}}
+
+{"question":"How many units did we sell?","bql":{"metric":"units","group_by":[]}}
+{"question":"What were total units sold?","bql":{"metric":"units","group_by":[]}}
+{"question":"How many products were sold?","bql":{"metric":"units","group_by":[]}}
+
+{"question":"What was the average order value?","bql":{"metric":"average_order_value","group_by":[]}}
+{"question":"What was our AOV?","bql":{"metric":"average_order_value","group_by":[]}}
+
+{"question":"What was revenue by region?","bql":{"metric":"revenue","group_by":["region"]}}
+{"question":"Show revenue for each region.","bql":{"metric":"revenue","group_by":["region"]}}
+{"question":"What were sales by region?","bql":{"metric":"revenue","group_by":["region"]}}
+{"question":"Break down revenue by region.","bql":{"metric":"revenue","group_by":["region"]}}
+
+{"question":"What was revenue by customer segment?","bql":{"metric":"revenue","group_by":["segment"]}}
+{"question":"Show sales by segment.","bql":{"metric":"revenue","group_by":["segment"]}}
+{"question":"Break down revenue by customer segment.","bql":{"metric":"revenue","group_by":["segment"]}}
+
+{"question":"What was revenue by product category?","bql":{"metric":"revenue","group_by":["category"]}}
+{"question":"Show sales by category.","bql":{"metric":"revenue","group_by":["category"]}}
+{"question":"Break down revenue by product category.","bql":{"metric":"revenue","group_by":["category"]}}
+
+{"question":"What was revenue by product?","bql":{"metric":"revenue","group_by":["product"]}}
+{"question":"Show sales for each product.","bql":{"metric":"revenue","group_by":["product"]}}
+
+{"question":"How many orders were there by region?","bql":{"metric":"orders","group_by":["region"]}}
+{"question":"Show order count by region.","bql":{"metric":"orders","group_by":["region"]}}
+
+{"question":"How many units were sold by category?","bql":{"metric":"units","group_by":["category"]}}
+{"question":"Show units sold by product category.","bql":{"metric":"units","group_by":["category"]}}
+
+{"question":"What was average order value by region?","bql":{"metric":"average_order_value","group_by":["region"]}}
+{"question":"Show AOV by customer segment.","bql":{"metric":"average_order_value","group_by":["segment"]}}

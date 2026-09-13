@@ -1,0 +1,91 @@
+metrics:
+
+  revenue:
+    description: "Total monetary value of products sold."
+
+    expression: "SUM(order_items.quantity * order_items.unit_price)"
+
+    entity: order_items
+
+    synonyms:
+      - sales
+      - total sales
+      - sales revenue
+      - money generated
+      - sales value
+
+
+  orders:
+    description: "Number of distinct customer orders."
+
+    expression: "COUNT(DISTINCT orders.order_id)"
+
+    entity: orders
+
+    synonyms:
+      - order count
+      - number of orders
+      - purchases
+      - transactions
+
+
+  units:
+    description: "Total number of product units sold."
+
+    expression: "SUM(order_items.quantity)"
+
+    entity: order_items
+
+    synonyms:
+      - units sold
+      - products sold
+      - quantity sold
+      - items sold
+
+
+  average_order_value:
+    description: "Average monetary value of an order."
+
+    expression: >
+      SUM(order_items.quantity * order_items.unit_price)
+      / COUNT(DISTINCT orders.order_id)
+
+    entity: orders
+
+    synonyms:
+      - AOV
+      - average order value
+      - average purchase value
+      - average transaction value
+
+
+dimensions:
+
+  region:
+    entity: customers
+    field: region
+    description: "Geographic region of the customer."
+
+
+  segment:
+    entity: customers
+    field: segment
+    description: "Customer business segment."
+
+
+  category:
+    entity: products
+    field: category
+    description: "Product category."
+
+
+  product:
+    entity: products
+    field: product_name
+    description: "Individual product."
+
+
+  order_date:
+    entity: orders
+    field: order_date
+    description: "Date on which the order was placed."
